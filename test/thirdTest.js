@@ -3,8 +3,8 @@ const { Builder, By, Key } = require("selenium-webdriver");
 var should = require("chai").should();
 
 // describe
-describe("add todo tests", function () {
-  it("add a todo to the application", async function () {
+describe("add another todo tests", function () {
+  it("add another todo to the application", async function () {
     // launch the browser
     let driver = await new Builder().forBrowser("chrome").build();
 
