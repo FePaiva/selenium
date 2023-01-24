@@ -31,4 +31,30 @@ describe("add another todo tests", function () {
     // close the borwser
     await driver.quit();
   });
+  it("add another todo to the application", async function () {
+    // launch the browser
+    let driver = await new Builder().forBrowser("chrome").build();
+
+    // navigate to app
+    await driver.get("https://lambdatest.github.io/sample-todo-app/");
+
+    // add todo to the list
+    await driver
+      .findElement(By.id("sampletodotext"))
+      .sendKeys("Learn Selenium", Key.RETURN);
+
+    // assert
+    let todoText = await driver
+      .findElement(By.xpath("//li[last()]"))
+      .getText()
+      .then(function (value) {
+        return value;
+      });
+
+    // assert using chai should
+    todoText.should.equal("Post test report on LinkedIn.");
+
+    // close the borwser
+    await driver.quit();
+  });
 });
