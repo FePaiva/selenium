@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 3,
-    "tests": 4,
-    "passes": 4,
+    "suites": 4,
+    "tests": 6,
+    "passes": 5,
     "pending": 0,
-    "failures": 0,
-    "start": "2023-01-24T22:12:23.741Z",
-    "end": "2023-01-24T22:12:30.982Z",
-    "duration": 7241,
-    "testsRegistered": 4,
-    "passPercent": 100,
+    "failures": 1,
+    "start": "2023-01-25T00:15:10.027Z",
+    "end": "2023-01-25T00:15:17.597Z",
+    "duration": 7570,
+    "testsRegistered": 6,
+    "passPercent": 83.33333333333334,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "fcf83bfc-c484-4dbb-a6c8-64f6e053750a",
+      "uuid": "0b1d915c-d2b9-4d6d-9853-320e0f4a0b5c",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6628026c-8f78-4c0a-b4f9-4078a9fa34bb",
+          "uuid": "0155db0c-5bb9-4323-8734-8d62e84f8b7a",
           "title": "add todo tests",
           "fullFile": "/Users/felippepaiva/Documents/selenium/test/secondTest.js",
           "file": "/test/secondTest.js",
@@ -38,7 +38,7 @@
               "title": "add a todo to the application",
               "fullTitle": "add todo tests add a todo to the application",
               "timedOut": null,
-              "duration": 3304,
+              "duration": 4624,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,7 +47,7 @@
               "context": null,
               "code": "// launch the browser\nlet driver = await new Builder().forBrowser(\"chrome\").build();\n// navigate to app\nawait driver.get(\"https://lambdatest.github.io/sample-todo-app/\");\n// add todo to the list\nawait driver\n  .findElement(By.id(\"sampletodotext\"))\n  .sendKeys(\"Learn Selenium\", Key.RETURN);\n// assert\n// xpath -> finding the list of \"li\", and retrieve the last one as \"Learn Selenium\" was added last.\nlet todoText = await driver\n  .findElement(By.xpath(\"//li[last()]\"))\n  .getText()\n  .then(function (value) {\n    return value;\n  });\n// assert using chai should\ntodoText.should.equal(\"Learn Selenium\");\n// close the borwser\nawait driver.quit();",
               "err": {},
-              "uuid": "ebe8000a-f50a-4fcd-ad80-ba7ccabc9aa4",
+              "uuid": "87251b57-1312-46e0-aad1-3d5cf646e571",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -55,18 +55,18 @@
           ],
           "suites": [],
           "passes": [
-            "ebe8000a-f50a-4fcd-ad80-ba7ccabc9aa4"
+            "87251b57-1312-46e0-aad1-3d5cf646e571"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3304,
+          "duration": 4624,
           "root": false,
           "rootEmpty": false,
           "_timeout": null
         },
         {
-          "uuid": "706868aa-0f9d-4a4f-93d9-05613610ebfc",
+          "uuid": "fdb85b74-9bad-4b44-a10a-1c4e142eec34",
           "title": "add another todo tests",
           "fullFile": "/Users/felippepaiva/Documents/selenium/test/thirdTest.js",
           "file": "/test/thirdTest.js",
@@ -77,7 +77,7 @@
               "title": "add another todo to the application",
               "fullTitle": "add another todo tests add another todo to the application",
               "timedOut": null,
-              "duration": 3748,
+              "duration": 4606,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -86,7 +86,7 @@
               "context": null,
               "code": "// launch the browser\nlet driver = await new Builder().forBrowser('chrome').build();\n// navigate to app\nawait driver.get('https://lambdatest.github.io/sample-todo-app/');\n// add todo to the list\nawait driver\n  .findElement(By.id('sampletodotext'))\n  .sendKeys('Learn Selenium', Key.RETURN);\n// assert\n// xpath -> finding the list of \"li\", and retrieve the last one as \"Learn Selenium\" was added last.\nlet todoText = await driver\n  .findElement(By.xpath('//li[last()]'))\n  .getText()\n  .then(function (value) {\n    return value;\n  });\n// assert using chai should\ntodoText.should.equal('Learn Selenium');\n// close the borwser\nawait driver.quit();",
               "err": {},
-              "uuid": "2fe5df14-d562-4384-a138-cb68ec0f0ae1",
+              "uuid": "4937920f-18a8-48cf-8cac-e66a5fa5685b",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -95,7 +95,7 @@
               "title": "add another todo to the application",
               "fullTitle": "add another todo tests add another todo to the application",
               "timedOut": null,
-              "duration": 2145,
+              "duration": 2373,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -104,7 +104,7 @@
               "context": null,
               "code": "// launch the browser\nlet driver = await new Builder().forBrowser('chrome').build();\n// navigate to app\nawait driver.get('https://lambdatest.github.io/sample-todo-app/');\n// add todo to the list\nawait driver\n  .findElement(By.id('sampletodotext'))\n  .sendKeys('Post test report on LinkedIn.', Key.RETURN);\n// assert\nlet todoText = await driver\n  .findElement(By.xpath('//li[last()]'))\n  .getText()\n  .then(function (value) {\n    return value;\n  });\n// assert using chai should\ntodoText.should.equal('Post test report on LinkedIn.');\n// close the borwser\nawait driver.quit();",
               "err": {},
-              "uuid": "04bce94b-c9d8-4d68-882d-3793b3e1e768",
+              "uuid": "dfde9aaf-f610-413c-95ea-a7c287472059",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -112,19 +112,19 @@
           ],
           "suites": [],
           "passes": [
-            "2fe5df14-d562-4384-a138-cb68ec0f0ae1",
-            "04bce94b-c9d8-4d68-882d-3793b3e1e768"
+            "4937920f-18a8-48cf-8cac-e66a5fa5685b",
+            "dfde9aaf-f610-413c-95ea-a7c287472059"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5893,
+          "duration": 6979,
           "root": false,
           "rootEmpty": false,
           "_timeout": null
         },
         {
-          "uuid": "08a01a2a-037f-41b5-bb42-bacabf804a35",
+          "uuid": "a747ebb7-4208-49cd-8007-ba4d73947dc4",
           "title": "check search functionability",
           "fullFile": "/Users/felippepaiva/Documents/selenium/test/googleTest.js",
           "file": "/test/googleTest.js",
@@ -135,16 +135,16 @@
               "title": "runs a basic search",
               "fullTitle": "check search functionability runs a basic search",
               "timedOut": null,
-              "duration": 7005,
+              "duration": 7030,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "let driver = await new Builder().forBrowser('chrome').build();\nawait driver.get('https://www.google.com/');\nawait driver\n  .findElement(By.name('q'))\n  .sendKeys('https://fepaiva.com/', Key.RETURN);\nawait driver.quit();",
+              "code": "let driver = await new Builder().forBrowser('chrome').build();\nawait driver.get('https://www.google.com/');\nawait driver\n  .findElement(By.name('q'))\n  .sendKeys('Felippe Paiva', Key.RETURN);\nawait driver.quit();",
               "err": {},
-              "uuid": "96f67661-318f-4794-b26b-b5e251425181",
+              "uuid": "9be04e0d-b6a5-461c-a94a-03c3fc921cb5",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -152,12 +152,113 @@
           ],
           "suites": [],
           "passes": [
-            "96f67661-318f-4794-b26b-b5e251425181"
+            "9be04e0d-b6a5-461c-a94a-03c3fc921cb5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 7005,
+          "duration": 7030,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "c3c6d679-e8a9-4bc9-b9de-3d702f8a5238",
+          "title": "GitHub Sign In",
+          "fullFile": "/Users/felippepaiva/Documents/selenium/test/githubTest.js",
+          "file": "/test/githubTest.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"GitHub Sign In\"",
+              "fullTitle": "GitHub Sign In \"before all\" hook in \"GitHub Sign In\"",
+              "timedOut": null,
+              "duration": 4793,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser('chrome').build();\nawait driver.get('https://github.com/');",
+              "err": {},
+              "uuid": "f93211aa-9342-405a-bf64-12789cf4324c",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"GitHub Sign In\"",
+              "fullTitle": "GitHub Sign In \"after all\" hook in \"GitHub Sign In\"",
+              "timedOut": null,
+              "duration": 52,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "5bb89c25-cd32-437f-9dc4-889ce677cddc",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "should allow user to go to sign in page",
+              "fullTitle": "GitHub Sign In should allow user to go to sign in page",
+              "timedOut": null,
+              "duration": 1006,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.findElement(By.partialLinkText('Sign in')).click();\nconsole.log(await driver.getTitle());\nif ((await driver.getTitle()) === 'Sign in to GitHub · GitHub') {\n  console.log('We got the title right.');\n} else {\n  console.log('The test failed.');\n  return;\n}",
+              "err": {},
+              "uuid": "d85afeb5-05d5-4918-a23e-447ddd55e289",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should allow user to sign in with valid credentials",
+              "fullTitle": "GitHub Sign In should allow user to sign in with valid credentials",
+              "timedOut": null,
+              "duration": 1454,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await driver.findElement(By.name('login')).sendKeys('FeTeste');\nawait driver\n  .findElement(By.name('password'))\n  .sendKeys('Yasmim2901@', Key.RETURN);\nawait driver.wait(until.urlIs('https://github.com/'), 5000);\nconst createRepoBtn = await driver.findElement(\n  By.partialLinkText('Create repository')\n);\nassert.ok(createRepoBtn.isDisplayed());",
+              "err": {
+                "message": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"partial link text\",\"selector\":\"Create repository\"}\n  (Session info: chrome=109.0.5414.87)",
+                "estack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"partial link text\",\"selector\":\"Create repository\"}\n  (Session info: chrome=109.0.5414.87)\n    at Object.throwDecodedError (node_modules/selenium-webdriver/lib/error.js:524:15)\n    at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:587:13)\n    at Executor.execute (node_modules/selenium-webdriver/lib/http.js:515:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Driver.execute (node_modules/selenium-webdriver/lib/webdriver.js:741:17)\n    at async Context.<anonymous> (test/githubTest.js:35:27)",
+                "diff": null
+              },
+              "uuid": "96cc7fbc-d18e-4d90-b1c9-0686b8a72d8c",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d85afeb5-05d5-4918-a23e-447ddd55e289"
+          ],
+          "failures": [
+            "96cc7fbc-d18e-4d90-b1c9-0686b8a72d8c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2460,
           "root": false,
           "rootEmpty": false,
           "_timeout": null
